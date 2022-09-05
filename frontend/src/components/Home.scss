@@ -1,0 +1,121 @@
+.personal-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: var(--content-between);
+}
+
+.personal-info div {
+  text-align: center;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-weight: 500;
+  font-size: 14pt;
+}
+
+.image img {
+  height: 150px;
+  width: 150px;
+  border-radius: 80%;
+}
+
+.home-content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.icons {
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+  &__button {
+    margin: 10px 5px 0;
+  }
+}
+
+a {
+  margin: 0 10px;
+}
+
+$social-button-size: 40px;
+$social-button-icon-size: 0.7;
+$social-button-background: #fff;
+$social-button-active-color: #fff;
+$social-button-transition-time: 0.3s;
+
+$social-button-colors: (
+        'mail': #0072c6,
+        'facebook': #3b5999,
+        'linkedin': #0077b5,
+        'github': #6e5494,
+        'codepen': #212121,
+        'steam': #7da10e,
+        'snapchat': #eec900,
+        'twitter': #55acee,
+        'instagram': #e4405f,
+        'npmjs': #c12127,
+);
+
+.social-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: $social-button-size;
+  height: $social-button-size;
+  text-decoration: none;
+  border-radius: 100%;
+  background: $social-button-background;
+  text-align: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    transition: $social-button-transition-time;
+  }
+
+
+  &:hover {
+    color: $social-button-active-color;
+
+    &::after {
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      margin-left: calc(-50% - 1px);
+    }
+  }
+
+  svg {
+    position: relative;
+    z-index: 1;
+    transition: $social-button-transition-time;
+  }
+
+  svg {
+    height: percentage($social-button-icon-size);
+    width: percentage($social-button-icon-size);
+  }
+
+  @each $name, $color in $social-button-colors {
+    &--#{$name} {
+      color: $color;
+
+      &::after {
+        background: $color;
+      }
+    }
+  }
+}
+
+/* Style for the introduction block */
+.welcome {
+  font-size: 16pt;
+  font-weight: 700;
+}

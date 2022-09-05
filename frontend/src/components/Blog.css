@@ -1,0 +1,38 @@
+/* Style for the block of blog abstract */
+.blog {
+    display: flex;
+    flex-direction: column;
+    margin: 0 75px 40px 0;
+    padding: 10px 20px;
+    background-color: #f6f3ed;
+    border: 1px solid white;
+    border-radius: 24px;
+    height: fit-content;
+    transition-property: padding;
+}
+
+.blog:active {
+    transform: translate(5px, 5px);
+}
+
+/* Style for the title in the blog abstract block */
+.blog-title {
+    font-size: 14pt;
+    font-weight: bolder;
+}
+
+/* Style for the content in the blog abstract block */
+.blog-content {
+    /*margin: 12px 0;*/
+    line-height: 200%;
+}
+
+.blog-content p {
+    margin: 0;
+}
+
+/* Style for the author and creation date in the blog abstract block */
+.blog-info {
+    font-size: 12px;
+    font-weight: lighter;
+}

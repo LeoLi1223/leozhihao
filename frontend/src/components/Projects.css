@@ -1,0 +1,45 @@
+.proj-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: var(--content-between);
+}
+
+.proj-content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table th {
+    background-color: dimgrey;
+    color: white;
+    padding: 10px 10px;
+}
+
+table tr td {
+    height: fit-content;
+    padding: 10px 10px;
+}
+
+/* Set the width of the project name column to 80% of the table width */
+.pName {
+    width: 80%;
+}
+
+/* Alternate table row color */
+tr:nth-child(odd) td {
+    background-color: white;
+}
+
+tr:nth-child(even) td {
+    background-color: #c7c7c7;
+}

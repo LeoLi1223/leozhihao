@@ -1,0 +1,39 @@
+:root {
+  --header-height: 60px;
+  --footer-height: 60px;
+  --content-between: 24px;
+}
+
+body {
+  height: 100vh;
+  background-color: #f8f2e1;
+  margin: 30px 110px;
+}
+
+/* General style for the link */
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+/* Use flexbox to display contents in the assigned block. Default: row */
+.flex {
+  display: flex;
+}
+
+/*@media (prefers-reduced-motion: no-preference) {*/
+/*  .App-logo {*/
+/*    animation: App-logo-spin infinite 20s linear;*/
+/*  }*/
+/*}*/
+
+/*@keyframes App-logo-spin {*/
+/*  from {*/
+/*    transform: rotate(0deg);*/
+/*  }*/
+/*  to {*/
+/*    transform: rotate(360deg);*/
+/*  }*/
+/*}*/
+
+

@@ -1,0 +1,12 @@
+.menu {
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 3;
+    font-family: monospace;
+    font-size: 16pt;
+    height: var(--header-height);
+}
+
+.menu div {
+    margin-right: var(--content-between);
+}
